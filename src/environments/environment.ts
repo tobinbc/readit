@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl:
+    'https://www.fantasticfiction.com/dbs/author-suggester?site=FF&country=GB&q=c s',
+  search: {
+    author: 'author-suggester'
+  },
+  direct: {
+    author: 'authors2',
+    book: 'books2',
+    series: 'series'
+  }
 };
 
 /*

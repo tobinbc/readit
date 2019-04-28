@@ -1,3 +1,83 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" contentId="mainContent">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          Read It
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content id="side-menu21">
+      <ion-menu-toggle>
+        <ion-list id="readIt-list1">
+          <ion-item (click)="goToAdd()" id="readIt-list-item10">
+            <ion-icon color="primary" name="add" slot="start"></ion-icon>
+            <ion-label color="primary">
+              Add
+            </ion-label>
+            <ion-icon
+              color="primary"
+              name="arrow-dropright"
+              slot="end"
+            ></ion-icon>
+          </ion-item>
+          <ion-item-divider color="light">
+            {{ books.length ? "Current books" : "No current books :(" }}
+          </ion-item-divider>
+
+          <ion-item
+            *ngFor="let book of books; let i = $index"
+            (click)="goToBook(book)"
+          >
+            <ion-icon color="primary" name="book" slot="start"></ion-icon>
+            <ion-label color="primary">
+              {{ book.title }}
+            </ion-label>
+            <ion-icon
+              color="primary"
+              name="arrow-dropright"
+              slot="end"
+            ></ion-icon>
+          </ion-item>
+
+          <ion-item-divider color="light" id="readIt-list-item-divider2">
+            My Stuff
+          </ion-item-divider>
+          <ion-item-sliding>
+            <ion-item
+              color="none"
+              menuClose=""
+              (click)="goToBook()"
+              id="readIt-list-item1"
+            >
+              <ion-icon name="list" item-left></ion-icon>
+              My Series
+            </ion-item>
+            <ion-item-options side="start">
+              <button ion-button color="positive"></button>
+            </ion-item-options>
+          </ion-item-sliding>
+          <ion-item
+            color="none"
+            menuClose=""
+            (click)="goToAuthor()"
+            id="readIt-list-item3"
+          >
+            <ion-icon name="heart" item-left></ion-icon>
+            Reading List
+          </ion-item>
+          <ion-item
+            color="none"
+            menuClose=""
+            (click)="goToAccount()"
+            id="readIt-list-item4"
+          >
+            <ion-icon name="person" item-left></ion-icon>
+            Account
+          </ion-item>
+        </ion-list>
+      </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="mainContent"></ion-router-outlet>
 </ion-app>

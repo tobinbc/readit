@@ -9,3 +9,10 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+ion-col{
+    --ion-grid-column-padding:0;
+}
+ion-grid{
+    --ion-grid-padding:0;
+}

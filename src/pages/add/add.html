@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Add
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content id="page4">
+  <ion-item>
+    <ion-input clearInput placeholder="Search"> </ion-input>
+    <ion-button icon-only slot="end">
+        <ion-icon name="search" ></ion-icon>
+    </ion-button>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button
+          expand="full"
+          [color]="getSearchType('author')"
+          (click)="setSearchType('author')"
+        >
+          <ion-ripple-effect></ion-ripple-effect>
+          Author
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button
+          expand="full"
+          [color]="getSearchType('title')"
+          (click)="setSearchType('title')"
+        >
+          <ion-ripple-effect></ion-ripple-effect>
+          Title
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button
+          expand="full"
+          [color]="getSearchType('series')"
+          (click)="setSearchType('series')"
+        >
+          <ion-ripple-effect></ion-ripple-effect>
+          Series
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item-sliding>
+    <ion-item color="balanced" id="add-list-item8">
+      <ion-icon name="person-add" item-left></ion-icon>
+      Author 1
+      <ion-icon name="checkmark" item-right></ion-icon>
+    </ion-item>
+    <ion-item-options side="end">
+      <button ion-button color="positive">
+        Add
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+  <ion-item color="balanced" on-click="goToAuthor1()" id="add-list-item9">
+    <ion-icon name="person" item-left></ion-icon>
+    Author 1
+    <ion-icon name="arrow-dropright" item-right></ion-icon>
+  </ion-item>
+</ion-content>

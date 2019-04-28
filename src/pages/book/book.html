@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>
+      Book1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content id="page1">
+  <img src="assets/img/P5dBfochReCNA9YbVyvf_300" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+  <ion-list id="book1-list2">
+    <ion-item color="positive" on-click="goToMySeries()" id="book1-list-item5">
+      <ion-icon name="person" item-left></ion-icon>
+      Author1
+      <ion-icon name="arrow-dropright" item-right></ion-icon>
+    </ion-item>
+    <ion-item color="calm" on-click="goToMySeries()" id="book1-list-item15">
+      <ion-icon name="book" item-left></ion-icon>
+      Series 1
+      <ion-icon name="arrow-dropright" item-right></ion-icon>
+    </ion-item>
+    <ion-item-divider color="light" id="book1-list-item-divider3">
+      My Reading
+    </ion-item-divider>
+    <ion-item-sliding>
+      <ion-item color="none" id="book1-list-item6">
+        Status
+      </ion-item>
+      <ion-item-options side="start">
+        <button ion-button color="balanced">
+          Start
+        </button>
+        <button ion-button color="royal">
+          Stop
+        </button>
+        <button ion-button color="energized">
+          Page
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
